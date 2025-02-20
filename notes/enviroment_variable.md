@@ -6,10 +6,14 @@ In Unix-like operating systems, variables play a crucial role in the functionali
 
 Environment variables are key-value pairs that are recognized globally across the operating system and its applications. These variables are set within the shell's environment, typically initialized at system startup, and maintain their values throughout the session. They provide essential configuration and operational data to both the operating system and the software applications running on it. Although users typically do not modify these variables frequently, understanding and occasionally altering them can be crucial for advanced system management and troubleshooting.
 
-To view all currently defined environment variables, use the `printenv` command:
+To view all currently defined environment variables, use the `printenv` or `env` command:
 
 ```bash
 printenv
+```
+
+```bash
+env
 ```
 
 Here are some commonly used environment variables:
@@ -92,10 +96,16 @@ For a permanent change, add the export statement to a shell configuration file. 
 echo 'export PATH=$PATH:/new/directory' >> ~/.bashrc
 ```
 
-After editing `~/.bashrc`, reload the file to apply the changes:
+```bash
+echo 'export PATH=$PATH:/new/directory' >> ~/.bashrc
+```
 
 ```bash
 source ~/.bashrc
+```
+
+```bash
+source ~/.bash_profile
 ```
 
 #### Importance and Use
